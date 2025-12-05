@@ -89,8 +89,6 @@ jobs:
       fail-fast: false
       matrix:
         k3s_channel:
-          - "v1.30"
-          - "v1.31"
           - "v1.32"
           - "v1.33"
           - "v1.34"
@@ -103,4 +101,5 @@ jobs:
           echo "Running test with K3s version ${{matrix.k3s_channel}}"
           make e2e \
             -e E2E_K3S_VERSION=+${{matrix.k3s_channel}} \
-            -e E2E_INCLUDE=test_full_lifecycle
+            -e E2E_INCLUDE=test_full_lifecycle \
+            -e E2E_EXTRA=1
