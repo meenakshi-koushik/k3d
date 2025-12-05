@@ -93,6 +93,7 @@ jobs:
           - "v1.31"
           - "v1.32"
           - "v1.33"
+          - "v1.34"
     steps:
       - uses: actions/checkout@v4
       - name: Setup Docker
